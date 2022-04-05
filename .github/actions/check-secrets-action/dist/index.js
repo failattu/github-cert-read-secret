@@ -599,7 +599,7 @@ async function properSecretValue(token, owner, repo) {
             msg: "Incorrect solution",
             error: {
               expected: "We expected your secret to contain a value",
-              got: `A null value for the secret supplied at your-secret, which most likely means the secret doesn't exist.`,
+              got: `A null value for the secret supplied at salaisuus, which most likely means the secret doesn't exist.`,
             },
           },
         ],
@@ -6059,7 +6059,7 @@ const gradeLearner = __webpack_require__(244);
 
 async function run() {
   try {
-    const token = core.getInput("your-secret");
+    const token = core.getInput("salaisuus");
     const { owner, repo } = github.context.repo;
     const results = await gradeLearner(owner, repo, token);
 
